@@ -154,7 +154,7 @@ test('Mouse practice', async ({page}) => {
   const field1 = page.locator('#field1');
   const field2 = page.locator('#field2');
 
-  await field1.fill('NIGGER');
+  await field1.fill('SOMETHING');
   
   const field1Value = await field1.inputValue();
   await page.getByRole('button', {name: 'Copy Text'}).dblclick();

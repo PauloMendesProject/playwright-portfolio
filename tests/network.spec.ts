@@ -1,5 +1,4 @@
 import{test, expect} from '@playwright/test';
-import { title } from 'node:process';
 
 test('Mock an API response', async ({page}) => {
     await page.route('**/posts/1', async route => {
