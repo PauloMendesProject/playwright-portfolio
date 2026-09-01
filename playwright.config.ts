@@ -46,11 +46,13 @@ export default defineConfig({
     
     {
       name: 'chromium',
+      testIgnore: /authenticated\.spec\.ts/,
       use: { ...devices['Desktop Chrome']},
     },
 
     {
       name: 'chromium-authenticated',
+      testMatch: /authenticated\.spec\.ts/,
       use: {
         ...devices['Desktop Chrome'],
         storageState: 'auth/user.json',
@@ -60,11 +62,13 @@ export default defineConfig({
 
     {
       name: 'firefox',
+      testIgnore: /authenticated\.spec\.ts/,
       use: { ...devices['Desktop Firefox'] },
     },
 
     {
       name: 'webkit',
+      testIgnore: /authenticated\.spec\.ts/,
       use: { ...devices['Desktop Safari'] },
     },
 

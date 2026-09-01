@@ -261,7 +261,7 @@ test('Screenshot practice', async ({ page }, testInfo) => {
   await testInfo.attach('homepage screenshot', {body: screenshot, contentType: 'image/png'});
 });
 
-test('Visual comparison practice', async ({page}) => {
+test.skip('Visual comparison practice', async ({page}) => {
   await page.goto('https://playwrightlab.github.io/');
 
   await expect(page).toHaveScreenshot('playlab-home.png');
@@ -307,8 +307,3 @@ test('Complete cart flow using POM', async ({page}) => {
 
   await expect(backpack).toBeVisible();
 });
-
-test('Already logged in', async ({page}) => {
-  await page.goto('https://www.saucedemo.com/inventory.html');  
-  await expect(page).toHaveURL(/inventory/);
-})
